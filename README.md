@@ -81,6 +81,7 @@ We appreciate the contributions from the following community members:
 
 - [Techiral](https://github.com/Techiral/)
 - [BassCoder2808](https://github.com/BassCoder2808/)
+- [Prathamesh Patil](https://www.linkedin.com/in/prathamesh8124/)
 
 ---
 
