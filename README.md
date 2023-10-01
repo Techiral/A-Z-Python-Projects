@@ -1,9 +1,15 @@
 <h1 align="center">Welcome to A-Z-Python-Projects 🐍</h1>
 
 <p align="center">
+  <img src="https://img.shields.io/github/stars/Techiral/A-Z-Python-Projects?style=social" alt="GitHub stars">
+  <img src="https://img.shields.io/github/forks/Techiral/A-Z-Python-Projects?style=social" alt="GitHub forks">
   <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License">
   <img src="https://img.shields.io/badge/PRs-Welcome-green.svg" alt="PRs Welcome">
-</p>
+  <img src="https://img.shields.io/github/contributors/Techiral/A-Z-Python-Projects" alt="GitHub contributors">
+  <img src="https://img.shields.io/github/last-commit/Techiral/A-Z-Python-Projects" alt="GitHub last commit">
+  <img src="https://img.shields.io/github/issues-pr/Techiral/A-Z-Python-Projects" alt="GitHub pull requests">
+  <img src="https://img.shields.io/badge/Hacktoberfest-friendly-blueviolet" alt="Hacktoberfest">
+  </p>
 
 <p align="center">A curated collection of Python projects from A to Z, designed for beginners to advanced developers. Contribute and join Hacktoberfest!</p>
 
