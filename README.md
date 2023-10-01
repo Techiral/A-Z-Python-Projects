@@ -36,7 +36,7 @@ We welcome contributions from developers of all skill levels. Follow these steps
 3. **Commit your changes:** Commit your changes to your branch.
 
     ```bash
-    git commit -m "Add my awesome project and update README"
+    git commit -m "Merged and update README"
     ```
 
 4. **Push your changes:** Push your branch to your forked repository on GitHub.
@@ -71,7 +71,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 We appreciate the contributions from the following community members:
 
-- [Techiral](mailto:techiralthefuture@gmail.com)
+- [Techiral](https://github.com/Techiral/)
+- [BassCoder2808](https://github.com/BassCoder2808/)
 
 ---
 
