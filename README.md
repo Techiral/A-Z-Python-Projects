@@ -29,8 +29,6 @@
 
 4. **Contribute:** Create or improve Python projects and submit them following the contribution guidelines below.
 
-5. **Reference:** Mention your username in the Contributors Section below.
-
 ---
 
 ## 🤝 How to Contribute
@@ -56,6 +54,8 @@ We welcome contributions from developers of all skill levels. Follow these steps
 5. **Create a Pull Request:** Go to the [A-Z-Python-Projects repository](https://github.com/Techiral/A-Z-Python-Projects/) on GitHub and click on the "New Pull Request" button. Select your branch, add a descriptive title and comments, and submit the Pull Request.
 
 6. **Review and Collaborate:** Collaborate with the maintainers and other contributors to address any feedback and get your Pull Request merged.
+
+7. **Reference:** Mention your username in the Contributors Section below.
 
 ---
 
