@@ -29,6 +29,8 @@
 
 4. **Contribute:** Create or improve Python projects and submit them following the contribution guidelines below.
 
+5. **Reference:** Mention your username in the Contributors Section below.
+
 ---
 
 ## 🤝 How to Contribute
