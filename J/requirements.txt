@@ -1,0 +1,3 @@
+//Installation
+You can simply install it using pip with the following command:
+pip install pyjokes
