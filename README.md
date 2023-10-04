@@ -83,6 +83,7 @@ We appreciate the contributions from the following community members:
 - [BassCoder2808](https://github.com/BassCoder2808/)
 - [Prathamesh Patil](https://www.linkedin.com/in/prathamesh8124/)
 - [Leprecha1](https://github.com/leprecha1/)
+- [Shubham Atkal](https://github.com/shubhamatkal)
 
 ---
 
