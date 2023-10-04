@@ -1,0 +1,1 @@
+This code will print out one of 3 different snippets of text, and will measure how fast the user is typing in WPM(Words per minute). Upon completing the test, the user will be able to take another test, or simply end the program.
