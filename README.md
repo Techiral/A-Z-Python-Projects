@@ -84,6 +84,7 @@ We appreciate the contributions from the following community members:
 - [Prathamesh Patil](https://www.linkedin.com/in/prathamesh8124/)
 - [Leprecha1](https://github.com/leprecha1/)
 - [Shubham Atkal](https://github.com/shubhamatkal)
+-[Kevin Shah](https://github.com/TechoChat)
 
 ---
 
