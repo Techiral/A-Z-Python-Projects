@@ -1,0 +1,73 @@
+def convert_length(value, from_unit, to_unit):
+    # Define conversion factors
+    length_factors = {
+        "meters_to_feet": 3.28084,
+        "feet_to_meters": 0.3048,
+        "meters_to_miles": 0.000621371,
+        # Add more conversion factors as needed
+    }
+
+    if from_unit == to_unit:
+        return value  # No conversion needed
+    else:
+        conversion_key = f"{from_unit}_to_{to_unit}"
+        if conversion_key in length_factors:
+            return value * length_factors[conversion_key]
+        else:
+            return "Invalid conversion units"
+
+def convert_weight(value, from_unit, to_unit):
+    # Define conversion factors
+    weight_factors = {
+        "kilograms_to_pounds": 2.20462,
+        "pounds_to_kilograms": 0.453592,
+        # Add more conversion factors as needed
+    }
+
+    if from_unit == to_unit:
+        return value  # No conversion needed
+    else:
+        conversion_key = f"{from_unit}_to_{to_unit}"
+        if conversion_key in weight_factors:
+            return value * weight_factors[conversion_key]
+        else:
+            return "Invalid conversion units"
+
+def convert_temperature(value, from_unit, to_unit):
+    if from_unit == "celsius" and to_unit == "fahrenheit":
+        return (value * 9/5) + 32
+    elif from_unit == "fahrenheit" and to_unit == "celsius":
+        return (value - 32) * 5/9
+    else:
+        return "Invalid conversion units"
+
+if __name__ == "__main__":
+    print("Unit Converter")
+    print("1. Length")
+    print("2. Weight")
+    print("3. Temperature")
+    choice = int(input("Select a conversion type (1/2/3): "))
+
+    if choice == 1:
+        value = float(input("Enter the length value: "))
+        from_unit = input("Enter the source unit (e.g., meters): ").lower()
+        to_unit = input("Enter the target unit (e.g., feet): ").lower()
+        result = convert_length(value, from_unit, to_unit)
+        print(f"Result: {value} {from_unit} = {result} {to_unit}")
+
+    elif choice == 2:
+        value = float(input("Enter the weight value: "))
+        from_unit = input("Enter the source unit (e.g., kilograms): ").lower()
+        to_unit = input("Enter the target unit (e.g., pounds): ").lower()
+        result = convert_weight(value, from_unit, to_unit)
+        print(f"Result: {value} {from_unit} = {result} {to_unit}")
+
+    elif choice == 3:
+        value = float(input("Enter the temperature value: "))
+        from_unit = input("Enter the source unit (celsius/fahrenheit): ").lower()
+        to_unit = input("Enter the target unit (celsius/fahrenheit): ").lower()
+        result = convert_temperature(value, from_unit, to_unit)
+        print(f"Result: {value} {from_unit} = {result} {to_unit}")
+
+    else:
+        print("Invalid choice")

@@ -1,0 +1,4 @@
+pyttsx3==2.90         # For text-to-speech synthesis
+speechrecognition==3.8.1  # For speech recognition
+python-dotenv==0.19.0  # For loading environment variables from .env file
+openai==0.27.0         # For interacting with the OpenAI API
