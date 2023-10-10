@@ -14,7 +14,7 @@ The Organizer Tool is a simple command-line application designed to help users m
 1. Ensure you have Python installed on your system.
 2. Clone the repository:
    ```
-   git clone https://github.com/ayushnangia/organizer_tool.git
+   git clone https://github.com/ayushnangia/A-Z-Python-Projects/tree/main/O/organizer_tool.git
    ```
 3. Navigate to the project directory:
    ```
