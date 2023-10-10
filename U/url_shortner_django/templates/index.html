@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Short URL</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+    <style>
+        html {
+    height: 100%;
+  }
+
+body {
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    background: linear-gradient(#141e30, #243b55);
+}
+
+.login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.5);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+  }
+
+  .login-box .user-box {
+  position: relative;
+}
+
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+
+
+}
+
+.login-box .user-box label {
+  position: absolute;
+  top:0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 12px;
+}
+
+
+
+h1{ 
+    
+    margin-top: 140px;
+    margin-left: 35%;
+    color: #03e9f4;
+}
+.login-box form button {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #03e9f4;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px
+}
+
+.login-box button:hover {
+  background: #03e9f4;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4,
+              0 0 25px #03e9f4,
+              0 0 50px #03e9f4,
+              0 0 100px #03e9f4;
+}
+
+button{
+    background: none;
+    border: none;
+}
+
+h2{
+
+    color: #03e9f4;
+    
+}
+a{
+    text-decoration: none;
+}
+.login-box button span {
+  position: absolute;
+  display: block;
+}
+    </style>
+    </head>
+    <body>
+        <h1>URL Shortner Project</h1>
+
+        <div class="login-box"> 
+            <form id="post-form">
+                {% csrf_token %}
+                <div class="user-box">
+                    <input type="text" name="link" id="link" required>
+                    <label for="link">Enter the URL</label>
+                </div>
+                
+                <div class="user-box"><section id="'section"><a href="#"> <span></span><span></span><span></span><span></span><h2></h2></a></section></div>
+                <button type="submit" id="shorten">Short the url</button>
+                
+            </form>
+        </div>
+        
+
+
+        <script type="text/javascript">
+                $(document).on('submit','#post-form',function(e){
+                    e.preventDefault();
+                    $.ajax({
+                        type:'POST',
+                        url:'/create',
+                        data:{
+                            link:$('#link').val(),
+                            csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val(),
+                        },
+                        success: function(data){
+                            $('h2').html("localhost:8000/"+data)
+                    
+                        }
+                    });
+                });
+            
+        </script>
+    </body>
+    
+</html>
