@@ -1,7 +1,7 @@
-import random
+import random as r
 import hangman_art
 from word_list import words
-choosen_word = random.choice(words)
+choosen_word = r.choice(words)
 word_length = len(choosen_word)
 life = 6
 game_end = False
@@ -42,4 +42,6 @@ while not game_end:
     if "_" not in display:
         print("You win :) ")
         game_end = True
+
+print("The correct wordwas:- ",choosen_word)
     
