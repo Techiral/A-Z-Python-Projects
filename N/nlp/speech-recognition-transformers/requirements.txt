@@ -1,5 +1,0 @@
-transformers==4.11.2
-soundfile
-sentencepiece
-torchaudio
-pyaudio
