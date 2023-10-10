@@ -1,1 +1,0 @@
-Edit `reading_emails.py` on your needs and then run it.
