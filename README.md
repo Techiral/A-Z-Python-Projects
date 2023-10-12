@@ -90,3 +90,7 @@ We appreciate the contributions from the following community members:
 ---
 
 Happy coding! 🚀
+
+---
+
+[Leia este documento em Português 🇧🇷](README.pt-BR.md)
