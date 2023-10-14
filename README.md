@@ -86,6 +86,8 @@ We appreciate the contributions from the following community members:
 - [Shubham Atkal](https://github.com/shubhamatkal)
 - [Harsimran Singh](https://github.com/Harsimran-19)
 - [Ezhill Ragesh](https://github.com/ezhillragesh)
+- [Shailaputri](https://github.com/Shailaputri)
+
 
 ---
 
