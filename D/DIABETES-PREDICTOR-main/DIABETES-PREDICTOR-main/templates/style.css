@@ -1,0 +1,13 @@
+input {
+	padding: 6px;
+	font-size: 10px;
+	border-radius: 4px;
+}
+
+label {
+	width: 240px;
+	display: inline-block;
+}
+.form-label {
+    font-size: 40px; /* You can adjust the font size as needed */
+}
