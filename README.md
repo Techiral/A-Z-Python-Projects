@@ -69,6 +69,13 @@ This repository is Hacktoberfest-friendly! Here's how you can participate:
 
 ---
 
+## Related Hacktoberfest Projects
+
+- [STAR](https://github.com/Techiral/STAR)
+- [AI-OctoFusion](https://github.com/Techiral/AI-OctoFusion)
+
+---
+
 ## 📜 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
