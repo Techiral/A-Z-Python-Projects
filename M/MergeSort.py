@@ -29,7 +29,7 @@ def merge(left, right):
     return result
 
 if __name__ == "__main__":
-    data = [1, 7, 4, 1, 10, 9, -2]
+    data = [1, 7, 4, 1, 10, 9, -2, 8, 2, 1]
     print("Unsorted Array: ", data)
     sorted_array = merge_sort(data)
     print("Sorted array:", sorted_array)
