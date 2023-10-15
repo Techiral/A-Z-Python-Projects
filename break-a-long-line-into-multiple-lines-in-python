@@ -1,0 +1,19 @@
+# complete string in a single line
+print("BEFORE BREAKING:")
+print("How many times were you frustrated \
+while looking out for a good collection of\
+programming/ algorithm/ interview questions?")
+
+print()
+print("AFTER BREAKING:")
+# in print() statement adding backslash(\) is redundant
+print("How many times were you frustrated while looking out "
+	"for a good collection of programming/ algorithm/ "
+	"interview questions?")
+
+
+print("\nAFTER STORING IN A VARIABLE:")
+# while storing the same string in a variable adding backslash is required
+line = "How many times were you frustrated while looking out for a good " \
+	"collection of programming/ algorithm/ interview questions?"
+print(line)
