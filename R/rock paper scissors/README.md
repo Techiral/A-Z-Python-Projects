@@ -1,17 +1,33 @@
-# ROCK PAPER SCISSOR GAME
-## Description
-A simple CLI-based rock, paper, scissors game that allows the user to play against the computer.<br>
-Run the game by typing `python3 main.py` in the terminal if on Linux, or `python main.py` if on Windows.
+# Rock Paper Scissors Game
 
-## How to play
-Upon running the program, the instructions will be displayed. 
-The user will be asked to enter their choice. The objects rock, paper, scissors are mapped to the integers 1, 2, 3 respectively. <br>
-Making the proper choice leads to the computer selecting it's own choice.
-The winner will be decided by comparing the player and the computer's choices based on the generic game rule.
+This is a simple Command Line Interface Rock Paper Scissors game written in Python language. The game can be played against the computer, where the computer chooses a random move.
 
-## More information
-Author: [Aishik Mukherjee](https://aishik999.github.io)
+
+## How to Play
+
+To play the game, run the main.py file in your Python environment.
+
+The program will prompt the user to select either rock, paper, or scissor in the CLI.
+After the user selects their choice, the computer will randomly choose one of the three options as well. The program will then determine the winner based on the classic rock paper scissors rules:
+
+- Rock beats scissors
+- Scissors beats paper
+- Paper beats rock
+
+The program will display the user's choice, the computer's choice, and the outcome of the game (win, lose, or tie).
+
+## Requirements
+
+This program was developed using Python 3. To run the program, you will need to have Python 3 installed on your computer.
+
+
+## Acknowledgements
+
+- This project was inspired by the classic game of rock paper scissors.
+- Special thanks to anyone whose code was used as a reference.
+
 <br>
-Language: Python3
-<br>
-OS: Linux
+
+Created by [Aswin P Kumar](https://github.com/AswinPKumar01)
+
+Previous Contributor: [Aishik Mukherjee](https://aishik999.github.io)

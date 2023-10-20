@@ -1,37 +1,88 @@
 import random
 
-banner = """
-█▀█ █▀█ █▀▀ █▄▀ ░   █▀█ ▄▀█ █▀█ █▀▀ █▀█ ░   █▀ █▀▀ █ █▀ █▀ █▀█ █▀█ █▀
-█▀▄ █▄█ █▄▄ █░█ █   █▀▀ █▀█ █▀▀ ██▄ █▀▄ █   ▄█ █▄▄ █ ▄█ ▄█ █▄█ █▀▄ ▄█
-"""
+print("WELCOME TO THE GAME OF STONE, PAPER, SCISSORS!!")
 
-def game():
-    while True:
-        print("\n1. Rock 🪨\n2. Paper 📜\n3. Scissors ✂️")
-        user_choice = int(input("Enter your choice: "))
-        if user_choice not in [1, 2, 3]:
-            print("Invalid choice. Please enter 1, 2, or 3.")
-            continue
+round = int(input("How many rounds you would like to play? "))
+user_point = 0
+comp_point = 0
 
-        choices = {1: 'Rock', 2: 'Paper', 3: 'Scissors'}
-        computer_choice = random.randint(1, 3)
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
 
-        print("Computer chose: ", choices[computer_choice])
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
 
-        if user_choice == computer_choice:
-            print("It's a draw!")
-        elif (user_choice == 1 and computer_choice == 3) or (user_choice == 2 and computer_choice == 1) or (user_choice == 3 and computer_choice == 2):
-            print("Congratulations! You win! 🎉")
-        else:
-            print("Computer wins! Better luck next time! 🥹")
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
 
-        play_again = input("Do you want to play again? (y/n): ")
-        if play_again.lower() != "y":
-            print("Thanks for playing! 👋")
-            exit()
-        else:
-            game()
+images = [rock,paper,scissors]
 
-if __name__ == "__main__":
-    print(banner)
-    game()
+for i in range(round):
+    
+    print("ROUND: ", i+1)
+    
+    user_choice = int(input("""What is your play?
+    Type 0 for Rock
+    Type 1 for Paper
+    Type 2 for Scissors\n"""))
+
+    if user_choice >= 3 or user_choice < 0:
+        print("You should either choose Rock, Paper or Scissor")
+    else:
+        print(images[user_choice])
+
+        computer_choice = random.randint(0, 2)
+        print("Computer chose:")
+        print(images[computer_choice])
+
+        if user_choice == 0 and computer_choice == 2:
+            print("Yes! You WON")
+            user_point+=1
+
+        elif computer_choice == 0 and user_choice == 2:
+            print("Oh No! You LOSE")
+            comp_point+=1
+
+        elif computer_choice > user_choice:
+            print("Oh No! You LOSE")
+            comp_point+=1
+
+        elif user_choice > computer_choice:
+            print("Yes! You WON")
+            user_point+=1
+
+        elif computer_choice == user_choice:
+            print("Toit! It's a DRAW")
+print("-----------------------------------------------")
+print()
+
+if user_point > comp_point:
+    print("CONGRATULATIONS!! YOU WON THE GAME ")
+
+elif comp_point > user_point:
+    print("SORRY, YOU LOST THE GAME")
+
+elif user_point == comp_point:
+    print("GOOD GAME! ITS A DRAW")
+
+
+
+
