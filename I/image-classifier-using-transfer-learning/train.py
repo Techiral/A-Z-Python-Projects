@@ -32,8 +32,8 @@ def load_data():
 
     # roses = list(data_dir.glob('roses/*'))
     # 20% validation set 80% training set
-    # change: adding data 
-    image_generator = ImageDataGenerator(rescale=1/255, validation_split=0.2)
+    # change: adding random data augmentation to the preprocessing stage
+    image_generator = ImageDataGenerator(rescale=1/255,  ,validation_split=0.2)
 
     # make the training dataset generator
     train_data_gen = image_generator.flow_from_directory(directory=str(data_dir), batch_size=batch_size,
