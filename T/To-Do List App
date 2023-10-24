@@ -1,0 +1,58 @@
+import os
+
+def display_tasks(tasks):
+    print("To-Do List:")
+    for index, task in enumerate(tasks, start=1):
+        print(f"{index}. {task.strip()}")
+
+def add_task(tasks, new_task):
+    tasks.append(new_task)
+
+def save_tasks(tasks, filename):
+    with open(filename, 'w') as f:
+        for task in tasks:
+            f.write(task + '\n')
+
+def main():
+    filename = "todo.txt"
+
+    if not os.path.exists(filename):
+        open(filename, 'w').close()
+
+    tasks = []
+    with open(filename, 'r') as f:
+        tasks = f.readlines()
+
+    while True:
+        print("\nOptions:")
+        print("1. View tasks")
+        print("2. Add task")
+        print("3. Mark task as complete")
+        print("4. Quit")
+
+        choice = input("Enter your choice: ")
+
+        if choice == '1':
+            display_tasks(tasks)
+        elif choice == '2':
+            new_task = input("Enter a new task: ")
+            add_task(tasks, new_task)
+            save_tasks(tasks, filename)
+            print("Task added.")
+        elif choice == '3':
+            display_tasks(tasks)
+            task_index = int(input("Enter the task number you want to mark as complete: ")) - 1
+            if 0 <= task_index < len(tasks):
+                tasks.pop(task_index)
+                save_tasks(tasks, filename)
+                print("Task marked as complete.")
+            else:
+                print("Invalid task number.")
+        elif choice == '4':
+            print("Goodbye!")
+            break
+        else:
+            print("Invalid choice. Please try again.")
+
+if __name__ == "__main__":
+    main()
