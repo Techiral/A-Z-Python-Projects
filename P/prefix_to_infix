@@ -1,0 +1,26 @@
+def is_operator(token):
+    return token in "+-*/"
+
+def prefix_to_infix(prefix_expression):
+    stack = []
+    tokens = prefix_expression.split()
+    
+    for token in reversed(tokens):
+        if not is_operator(token):
+            stack.append(token)
+        else:
+            operand1 = stack.pop()
+            operand2 = stack.pop()
+            infix_expression = f"({operand1} {token} {operand2})"
+            stack.append(infix_expression)
+    
+    if len(stack) != 1:
+        raise ValueError("Invalid prefix expression")
+    
+    return stack[0]
+
+# Example usage:
+prefix_expression = "* + 5 4 - 3 2"
+infix_expression = prefix_to_infix(prefix_expression)
+print("Prefix expression:", prefix_expression)
+print("Infix expression:", infix_expression)
