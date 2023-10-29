@@ -9,7 +9,7 @@ Digital Diary is a simple command-line Python application that allows you to wri
 
 ## Getting Started
 
-Prerequisites
+### Prerequisites
 
 - Python 3.x installed on your system.
 - No additional Python packages are required.
