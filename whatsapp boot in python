@@ -1,0 +1,29 @@
+# Required Libraries: twilio, flask
+
+from flask import Flask, request
+from twilio.twiml.messaging_response import MessagingResponse
+
+app = Flask(__name__)
+
+@app.route("/bot", methods=['POST'])
+def bot():
+    incoming_msg = request.values.get('Body', '').lower()
+    resp = MessagingResponse()
+    msg = resp.message()
+    responded = False
+
+    if 'hello' in incoming_msg:
+        msg.body('Hello! How can I assist you today?')
+        responded = True
+
+    if 'help' in incoming_msg:
+        msg.body('Sure, how can I help you?')
+        responded = True
+
+    if not responded:
+        msg.body('Sorry, I didn\'t get that. Can you please clarify?')
+
+    return str(resp)
+
+if __name__ == "__main__":
+    app.run(debug=True)
