@@ -1,0 +1,10 @@
+This is a sample text file for testing.
+
+It contains several words and sentences that can be used to check the word occurrence counting program.
+
+Feel free to modify this file and experiment with different words, punctuation, and formatting to see how the program works.
+
+This is a sample sentence.
+Here's another sample sentence.
+
+End of the sample text file.
