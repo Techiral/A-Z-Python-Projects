@@ -1,0 +1,41 @@
+swagger: "2.0"
+
+info:
+  title: "My API documentation"
+  version: "1.0"
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+
+basePath: /v1.0
+
+schemes:
+ - http
+paths:
+  /products/getproduct:
+      get:
+        tags:
+        - public
+        operationId: api.products.read_product
+        responses:
+          '200':
+            description: 'Fetch a product from the database'
+            schema:
+                $ref: '#/definitions/Product'
+# tags are used for organizing operations
+tags:
+- name: public
+  description: Operations available to regular developers
+- name: admins
+  description: Secured Admin-only calls
+
+definitions:
+  Product:
+    type: object
+    properties:
+      _id:  { type: string }
+      prodname: { type: string }
+      catagory: { type: string }
+      quantity: 
+        type: number
+view raw
