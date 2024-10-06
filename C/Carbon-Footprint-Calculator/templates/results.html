@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="text-center">Your Carbon Footprint Results</h1>
+<div class="mt-4">
+    <p><strong>Transportation Emissions:</strong> {{ total_transport|round(2) }} lbs CO₂</p>
+    <p><strong>Home Energy Emissions:</strong> {{ total_energy|round(2) }} lbs CO₂</p>
+    <p><strong>Dietary Emissions:</strong> {{ total_diet }} lbs CO₂</p>
+    <p><strong>Waste Emissions:</strong> {{ total_waste }} lbs CO₂</p>
+    <hr>
+    <p><strong>Total Annual Emissions:</strong> {{ total_emissions|round(2) }} lbs CO₂</p>
+    <p><strong>Equivalent to:</strong> {{ total_emissions_metric_tons|round(2) }} metric tons CO₂</p>
+
+    {% if below_average %}
+    <div class="alert alert-success" role="alert">
+        Congratulations! Your carbon footprint is below the national average.
+    </div>
+    {% else %}
+    <div class="alert alert-warning" role="alert">
+        Your carbon footprint is above the national average. Consider making changes to reduce it.
+    </div>
+    {% endif %}
+
+    <h3>Suggestions to Reduce Your Carbon Footprint</h3>
+    <ul>
+        <li>Use public transportation, carpool, or cycle when possible.</li>
+        <li>Improve home insulation and use energy-efficient appliances.</li>
+        <li>Consider a plant-based diet or reduce meat consumption.</li>
+        <li>Recycle and reduce waste whenever possible.</li>
+        <li>Use renewable energy sources if available.</li>
+    </ul>
+
+    <a href="/" class="btn btn-secondary">Calculate Again</a>
+</div>
+{% endblock %}

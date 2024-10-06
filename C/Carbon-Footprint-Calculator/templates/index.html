@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="text-center">Carbon Footprint Calculator</h1>
+<form action="/calculate" method="post">
+    <h3>Transportation Emissions</h3>
+    <div class="mb-3">
+        <label for="car_miles" class="form-label">Average weekly miles driven by car:</label>
+        <input type="number" step="any" class="form-control" id="car_miles" name="car_miles">
+    </div>
+    <div class="mb-3">
+        <label for="car_mpg" class="form-label">Car's fuel efficiency (mpg):</label>
+        <input type="number" step="any" class="form-control" id="car_mpg" name="car_mpg">
+    </div>
+    <div class="mb-3">
+        <label for="bus_miles" class="form-label">Average weekly miles traveled by bus:</label>
+        <input type="number" step="any" class="form-control" id="bus_miles" name="bus_miles">
+    </div>
+    <div class="mb-3">
+        <label for="train_miles" class="form-label">Average weekly miles traveled by train:</label>
+        <input type="number" step="any" class="form-control" id="train_miles" name="train_miles">
+    </div>
+    <div class="mb-3">
+        <label for="flights_per_year" class="form-label">Number of flights per year (average length 4 hours):</label>
+        <input type="number" class="form-control" id="flights_per_year" name="flights_per_year">
+    </div>
+
+    <h3>Home Energy Use</h3>
+    <div class="mb-3">
+        <label for="electricity_kwh" class="form-label">Average monthly electricity usage (kWh):</label>
+        <input type="number" step="any" class="form-control" id="electricity_kwh" name="electricity_kwh">
+    </div>
+    <div class="mb-3">
+        <label for="natural_gas_therms" class="form-label">Average monthly natural gas usage (therms):</label>
+        <input type="number" step="any" class="form-control" id="natural_gas_therms" name="natural_gas_therms">
+    </div>
+    <div class="mb-3">
+        <label for="fuel_oil_gallons" class="form-label">Average monthly fuel oil usage (gallons):</label>
+        <input type="number" step="any" class="form-control" id="fuel_oil_gallons" name="fuel_oil_gallons">
+    </div>
+    <div class="mb-3">
+        <label for="propane_gallons" class="form-label">Average monthly propane usage (gallons):</label>
+        <input type="number" step="any" class="form-control" id="propane_gallons" name="propane_gallons">
+    </div>
+
+    <h3>Dietary Impact</h3>
+    <div class="mb-3">
+        <label class="form-label">Select your diet type:</label>
+        <select class="form-select" name="diet_choice">
+            <option value="1">Meat-heavy diet</option>
+            <option value="2" selected>Average diet</option>
+            <option value="3">Vegetarian</option>
+            <option value="4">Vegan</option>
+        </select>
+    </div>
+
+    <h3>Waste and Recycling</h3>
+    <div class="mb-3">
+        <label class="form-label">Do you recycle paper?</label>
+        <select class="form-select" name="recycle_paper">
+            <option value="yes">Yes</option>
+            <option value="no" selected>No</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Do you recycle plastic?</label>
+        <select class="form-select" name="recycle_plastic">
+            <option value="yes">Yes</option>
+            <option value="no" selected>No</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Do you recycle glass?</label>
+        <select class="form-select" name="recycle_glass">
+            <option value="yes">Yes</option>
+            <option value="no" selected>No</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Do you recycle metal?</label>
+        <select class="form-select" name="recycle_metal">
+            <option value="yes">Yes</option>
+            <option value="no" selected>No</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Calculate</button>
+</form>
+{% endblock %}

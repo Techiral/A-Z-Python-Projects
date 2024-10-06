@@ -1,0 +1,19 @@
+body {
+    background-color: #f8f9fa;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.btn-primary {
+    width: 100%;
+}
+
+.mt-4 {
+    margin-top: 2rem;
+}
